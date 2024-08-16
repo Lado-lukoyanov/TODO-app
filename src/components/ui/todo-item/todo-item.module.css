@@ -1,0 +1,27 @@
+.todoItemContent {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.todoItemFooter {
+  margin-top: 16px;
+}
+
+.todoItemCard {
+  margin: 16px;
+  border-color: grey;
+}
+
+.completed {
+  border-color: green;
+}
+
+.textStyle {
+  margin-left: 8px;
+}
+
+.errorText {
+  margin-top: 16px;
+  color: red;
+}
