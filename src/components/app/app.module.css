@@ -1,0 +1,23 @@
+.header {
+  color: rgb(103, 28, 28);
+  font-size: 100px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.todoViewsContainer {
+  min-width: 500px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+.todoFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}

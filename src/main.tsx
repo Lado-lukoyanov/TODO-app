@@ -1,10 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { App } from '@/components/app/App';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import { ConfigProvider } from "antd";
 
-createRoot(document.getElementById('root')!).render(
+import { App } from "@/components/app";
+import { store } from "./store/store";
+
+import ruRu from "antd/locale/ru_Ru";
+
+import "@/styles/index.css";
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <ConfigProvider locale={ruRu}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ConfigProvider>
+  </StrictMode>
+);

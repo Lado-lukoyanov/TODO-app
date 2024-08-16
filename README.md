@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# Тестовое задание: Создание ToDo-приложения
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание:
+**Todos** -это адаптивное одностраничное приложение, где можно добавлять новые задачи, которые можно сортировать на: все, выполненные, невыполненные. При попытке добавить "пустую" задачу, кнопка формы будет не активна. Так же можно подгружать любое количество файлов к задаче. И установить погоду.
 
-Currently, two official plugins are available:
+## Задание:
+#### Сделайте ToDo-приложение, позволяющее управлять текущим списком дел
+Что должно быть в интерфейсе:
+* Поле для ввода новой задачи
+* Возможность выбрать определенную дату или перейти на сегодняшнюю.
+* Возможность прикреплять к задачам любое количество файлов.
+* При выборе чекбокса «Указать погоду» в задаче, подгрузить по API погоду на время назначения задачи (она должна остаться прикрепленной к этой задаче). Вы можете использовать любой публичный API для определения погоды.
+* Отображение рядом с каждой задачей краткого текста, списка файлов и погоды
+* Списки всех задач, невыполненных и выполненных задач (по отдельности).
+* Список выполненных задач должен показывать время закрытия задачи.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Используемые технологии и API:
+* HTML
+* CSS
+* React.js
+* React Hooks
+* Redux/Toolkit
+* React-redux
+* TypeScript
+* Eslint
+* Axios
+* OpenWeatherMap API: Публичный API для получения информации о погоде (https://openweathermap.org/api).
+* Ant design
+* vite
 
-## Expanding the ESLint configuration
+## Описание выполненных задач:
+* Создание задачи: Пользователь может ввести текст задачи в специальное поле и добавить задачу в список.
+* Выбор даты: Пользователь может выбрать конкретную дату из календаря или установить текущую дату.
+* Прикрепление файлов: Пользователь может прикрепить любое количество файлов к каждой задаче.
+* Информация о погоде: При выборе чекбокса "Указать погоду" происходит запрос к API погоды и прикрепление информации о погоде к задаче.
+* Отображение задач: Задачи отображаются с кратким текстом, списком прикрепленных файлов и информацией о погоде (если она была запрошена).
+* Списки задач: Приложение отображает три списка - все задачи, невыполненные задачи и выполненные задачи.
+* Время выполнения: В списке выполненных задач отображается время завершения задачи.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Инструкция по установке:
+Клонируем репозиторий:
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+git clone https://github.com/Lado-lukoyanov/TODO-app.git
+```
+Переходим в папку проекта:
+```
+cd TODO-app
+```
+Устанавливаем зависимости:
+```
+npm install
+```
+Запускаем проект на компьютере:
+```
+npm run start
 ```
