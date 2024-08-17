@@ -20,7 +20,6 @@ export type Weather = {
   };
   weather: [
     {
-      main: string;
       description: string;
     }
   ];
