@@ -62,11 +62,7 @@ export const TodoItem = ({ todo }: TodoItemProps) => {
         <Button icon={<UploadOutlined />}>Добавить файл</Button>
       </Upload>
       {todo.weather && (
-        <WeatherCard
-          main={todo.weather.weather[0].main}
-          description={todo.weather.weather[0].description}
-          temp={todo.weather.main.temp}
-        ></WeatherCard>
+        <WeatherCard description={todo.weather.weather[0].description} temp={todo.weather.main.temp}></WeatherCard>
       )}
       {todo.completed && (
         <div className={styles.todoItemFooter}>
