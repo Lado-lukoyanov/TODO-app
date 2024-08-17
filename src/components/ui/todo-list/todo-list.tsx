@@ -6,6 +6,7 @@ import { Segmented, Typography } from "antd";
 
 import { selectTodoData } from "@/store/todo/selectors";
 import { filteredTodos } from "@/lib/utils/filtered-todos.util";
+import { getNoTasksMessage } from "@/lib/utils/get-no-tasks-message.util";
 
 import styles from "./todo-list.module.css";
 
@@ -31,9 +32,9 @@ export const TodoList = () => {
         }}
         block
       />
-      {!todos.length && (
+      {!filteredTodos(todos, filter).length && (
         <Typography.Title level={2} className={styles.todoListText}>
-          Нет задач
+          {getNoTasksMessage(filter)}
         </Typography.Title>
       )}
       {filteredTodos(todos, filter).map((todo) => (
