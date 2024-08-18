@@ -1,5 +1,5 @@
 import { TodoForm } from "@/components/ui/todo-form";
-import { TodoList } from "@/components/ui/todo-list/todo-list";
+import { TodoList } from "@/components/ui/todo-list";
 
 import styles from "./app.module.css";
 
